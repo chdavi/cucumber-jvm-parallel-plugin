@@ -196,6 +196,12 @@ public class CucumberITGenerator {
                 sb.append(", ");
             }
         }
+
+        sb.append(", ");
+        sb.append(String.format("\"%s:%s/%s.%s\"", "junit",
+                config.getCucumberOutputDir().replace('\\', '/'), fileCounter,
+                "xml"));
+
         return sb.toString();
     }
 
